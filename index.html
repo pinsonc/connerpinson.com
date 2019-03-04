@@ -4,9 +4,61 @@
         <meta charset="utf-8"/>
         <title>Conner Pinson</title>
         <link href="main.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata|Noto+Sans|Overpass|ZCOOL+QingKe+HuangYou" rel="stylesheet">
     </head>
 
     <body>
-        <p>Under construction...</p>
+        <header>
+            <h1 id="name">Conner Pinson is</h1>
+            <h2 id="descriptionEmail">reachable.</h2>
+            <h2 id="descriptionResume">looking for employment.</h2>
+            <h2 id="descriptionMedium">writing.</h2>
+            <h2 id="descriptionGit">creating software.</h2>
+            <h2 id="descriptionLinkedIn">networking.</h2>
+            <h2 id="descriptionYouTube">producing videos.</h2>
+            <h2 id="descriptionTwitter">interacting.</h2>   
+        </header>
+        <div id="row1">
+            <div class="iconLeft">
+                <a id="Email" onmouseover="display(this)" onmouseout="remove(this)" href="mailto:conner.pinson@vanderbilt.edu">
+                    <i class="far fa-envelope"></i>
+                </a>
+            </div>
+            <div class="iconRight">
+                <a id="Twitter" onmouseover="display(this)" onmouseout="remove(this)" href="https://www.twitter.com/ckpinson"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div id="row2">
+            <div class="iconLeft">
+                <a id="Resume" onmouseover="display(this)" onmouseout="remove(this)" href="Resume.html"><i class="far fa-file-alt"></i></a>
+            </div>
+            <div class="iconRight">
+                <a id="YouTube" onmouseover="display(this)" onmouseout="remove(this)" href="https://www.youtube.com/channel/UC0vVsskeTjaxQIKoC00wXjw"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div id="row3">
+            <div class="iconLeft">
+                <a id="Medium" onmouseover="display(this)" onmouseout="remove(this)" href="https://medium.com/@pinsonconner"><i class="fab fa-medium-m"></i></a>
+            </div>
+            <div class="iconRight">
+                <a id="LinkedIn" onmouseover="display(this)" onmouseout="remove(this)" href="https://www.linkedin.com/in/conner-pinson-50110a140/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div id="row4">
+            <a id="Git" onmouseover="display(this)" onmouseout="remove(this)" href="https://github.com/pinsonc"><i class="fab fa-github"></i></a>
+        </div>
+
+        <script>
+        function display(x) {
+            var descname = document.getElementById("description" + x.id)
+            descname.style.display = "inline"
+        }
+        function remove(x) {
+            var descname = document.getElementById("description" + x.id)
+            descname.style.display = "none"
+        }
+        </script>
+
     </body>
 </html>
