@@ -4,12 +4,13 @@
         <meta charset="utf-8"/>
         <title>Conner Pinson</title>
         <link href="main.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Noto+Sans|Overpass|ZCOOL+QingKe+HuangYou" rel="stylesheet">
     </head>
 
-    <body>
+    <body onload="mobile()">
         <header>
             <h1 id="name">Conner Pinson is</h1>
             <h2 id="descriptionEmail">reachable.</h2>
@@ -18,7 +19,8 @@
             <h2 id="descriptionGit">creating software.</h2>
             <h2 id="descriptionLinkedIn">networking.</h2>
             <h2 id="descriptionYouTube">producing videos.</h2>
-            <h2 id="descriptionTwitter">interacting.</h2>   
+            <h2 id="descriptionTwitter">interacting.</h2> 
+            <h2 id="descriptionBio">always learning.</h2>  
         </header>
         <div id="row1">
             <div class="iconLeft">
@@ -60,6 +62,42 @@
             var descname = document.getElementById("description" + x.id)
             descname.style.display = "none"
         }
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
+        }
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms))
+        }
+        async function mobile() {
+            if( isMobileDevice() ) {
+                var i
+                var descs = ["Email", "Resume", "Medium", "Git", "LinkedIn", "YouTube", "Twitter"]
+                await sleep(500)
+                for (i = 0; i < 7; i++) {
+                    var descname = document.getElementById("description"+descs[i])
+                    var iconame = document.getElementById(descs[i])
+                    descname.style.display = "inline"
+                    descname.classList.add('textAppear')
+                    iconame.classList.add('glowAppear')
+                    await sleep(2000)
+                    descname.classList.add('textDisappear')
+                    iconame.classList.add('glowDisappear')
+                    await sleep(500)
+                    descname.style.display = "none"
+                    await sleep(500)
+                }
+                for (i = 0; i < 7; i++) {
+                    var iconame = document.getElementById(descs[i])
+                    iconame.classList.remove('glowDisappear')
+                    iconame.classList.add('glowAppear')
+                    iconame.style.textShadow = "0 0 50px rgba(0,171,169,1)"
+                }
+                var final = document.getElementById("descriptionBio")
+                final.style.display = "inline"
+                final.classList.add('textAppear')
+            }
+        }
+        
         </script>
 
     </body>

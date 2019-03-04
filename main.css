@@ -68,6 +68,15 @@ a:link, a:visited {
     100% {
         text-shadow: 0 0 50px rgba(0,171,169,1);
     }
+}
+
+@keyframes glowDisappear {
+    0% {
+        text-shadow: 0 0 50px rgba(0,171,169,1);
+    }
+    100% {
+        text-shadow: 0 0 50px rgba(29,29,29,0.5);
+    }
 
 }
 
@@ -80,9 +89,33 @@ a:link, a:visited {
     }
 }
 
+@keyframes disappear {
+    0% {
+        color: rgb(0,171,169);
+    }
+    100% {
+        color:rgba(29,29,29,0.5);
+    }
+}
+
 .textAppear {
     animation: appear 0.5s 1 ease;
     color: rgba(0,171,169,1);
+}
+
+.textDisappear {
+    animation: disappear 0.5s 1 ease;
+    color: rgba(29,29,29,0.5);
+}
+
+.glowAppear {
+    animation: glow 0.5s 1 ease;
+    text-shadow: 0 0 50px rgba(0,171,169,1);
+}
+
+.glowDisappear {
+    animation: glowDisappear 0.5s 1 ease;
+    text-shadow: 0 0 50px rgba(29,29,29,0.5);
 }
 
 a:hover {
