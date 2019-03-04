@@ -38,7 +38,6 @@ div[id^="row"] {
     left: 50%;
     transform: translate(-50%, 10%);
     font-size: 25pt;
-    color: #eff4ff;
 }
 
 #row2 {
@@ -56,8 +55,13 @@ div[id^="row"] {
     transform: translate(-50%, 460%);
 }
 
+#row5 {
+    text-align: center;
+   
+}
+
 a:link, a:visited {
-    color: #eff4ff;
+    color: #CCCC99;
 }
 
 @keyframes glow {
@@ -72,11 +76,16 @@ a:link, a:visited {
 
 @keyframes appear {
     0% {
-        color: 0 0 40px rgba(29,29,29,0.5);
+        color: rgba(29,29,29,0.5);
     }
     100% {
-        color: 0 0 40px rgb(0,171,169);
+        color:rgb(0,171,169);
     }
+}
+
+.textAppear {
+    animation: appear 0.5s 1 ease;
+    color: rgba(0,171,169,1);
 }
 
 a:hover {
