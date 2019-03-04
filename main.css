@@ -2,6 +2,7 @@
     text-align: center;
     color: #eff4ff;
     font-family: 'Inconsolata', cursive;
+    font-size: 40pt;
 }
 
 body {
@@ -10,7 +11,8 @@ body {
 
 h2[id^="description"] {
     font-family: 'Inconsolata', cursive;
-    width: 250px;
+    font-size: 35pt;
+    width: 300px;
     position: absolute;
     text-align: center;
     color: #00aba9;
