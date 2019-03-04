@@ -33,7 +33,7 @@ h2[id^="description"] {
 }
 
 div[id^="row"] {
-    width: 70vh;
+    width: 70vw;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 10%);
@@ -41,23 +41,18 @@ div[id^="row"] {
 }
 
 #row2 {
-    width: 50vh;
+    width: 50vw;
     transform: translate(-50%, 160%);
 }
 
 #row3 {
-    width: 30vh;
+    width: 30vw;
     transform: translate(-50%, 310%);
 }
 
 #row4 {
     text-align: center;
     transform: translate(-50%, 460%);
-}
-
-#row5 {
-    text-align: center;
-   
 }
 
 a:link, a:visited {
