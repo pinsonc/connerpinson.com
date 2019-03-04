@@ -37,7 +37,7 @@ div[id^="row"] {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 10%);
-    font-size: 25pt;
+    font-size: 45pt;
 }
 
 #row2 {
@@ -61,10 +61,10 @@ a:link, a:visited {
 
 @keyframes glow {
     0% {
-        text-shadow: 0 0 40px rgba(29,29,29,0.5);
+        text-shadow: 0 0 50px rgba(29,29,29,0.5);
     }
     100% {
-        text-shadow: 0 0 40px rgba(0,171,169,1);
+        text-shadow: 0 0 50px rgba(0,171,169,1);
     }
 
 }
@@ -85,7 +85,7 @@ a:link, a:visited {
 
 a:hover {
     animation: glow 0.5s 1 ease;
-    text-shadow: 0 0 40px rgba(0,171,169,1);
+    text-shadow: 0 0 50px rgba(0,171,169,1);
 }
 
 .iconRight {
